@@ -26,10 +26,17 @@
 // {
 //   sum += num3;
 // }
+// else
+// {
+//         console.log("please enter above 35 values")
+// }
 
 // console.log(sum)
+// -----------------------------------------------------------------------------
 
-        //otp generator
+
+                  //otp generator
 
         // let otp = Math.floor(100000 + Math.random() * 900000);
         // console.log("Your OTP is: ", otp);
+// -----------------------------------------------------------------------------
