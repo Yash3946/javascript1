@@ -3,7 +3,7 @@ const canada = (amount, name) => ` your tour is confirmed in Canada because you 
 const dubai = (amount, name) => ` your tour is confirmed in Dubai because you have `+ amount;
 
 let amount = 120000;
-let name = "Yash";
+let name = "Yash"
 
 if (amount > 90000) 
 {
