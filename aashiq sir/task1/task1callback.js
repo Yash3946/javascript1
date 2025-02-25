@@ -1,6 +1,6 @@
 console.log("Bank of India");
 
-var avlbal = 35000; 
+var avlbal = 35000;
 var pin = 3946;
 
 function checkbal() {
@@ -9,9 +9,8 @@ function checkbal() {
 
 function withdrawal() {
     let amount = parseInt(prompt("Enter your withdrawal amount:"));
-
     if (amount <= avlbal) {
-        avlbal =avlbal- amount;
+        avlbal -= amount;
         console.log("Successfully withdrawn amount: " + amount);
         console.log("Your current balance is: " + avlbal);
     } else {
@@ -21,14 +20,17 @@ function withdrawal() {
 
 function deposit() {
     let amount = parseInt(prompt("Enter your deposit amount:"));
-
-    avlbal = avlbal + amount;
+    avlbal += amount;
     console.log("Successfully deposited: " + amount);
     console.log("Your new balance is: " + avlbal);
 }
 
-var x = confirm("Do you want to enter the ATM?");
+// Higher-order function using callback
+function balance(callback) {
+    callback();
+}
 
+var x = confirm("Do you want to enter the ATM?");
 if (x) {
     console.log("Thank you for choosing our ATM.");
 
@@ -37,16 +39,16 @@ if (x) {
 
     if (pin === pass) {
         var choice = parseInt(prompt("Choose an option:\n 1. Check Balance\n 2. Withdrawal\n 3. Deposit"));
-
+        
         switch (choice) {
             case 1:
-                checkbal();
+                balance(checkbal);
                 break;
             case 2:
-                withdrawal();
+                balance(withdrawal);
                 break;
             case 3:
-                deposit();
+                balance(deposit);
                 break;
             default:
                 console.log("Invalid option selected.");
