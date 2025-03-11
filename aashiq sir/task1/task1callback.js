@@ -9,8 +9,9 @@ function checkbal() {
 
 function withdrawal() {
     let amount = parseInt(prompt("Enter your withdrawal amount:"));
+
     if (amount <= avlbal) {
-        avlbal -= amount;
+        avlbal =  avlbal - amount;
         console.log("Successfully withdrawn amount: " + amount);
         console.log("Your current balance is: " + avlbal);
     } else {
@@ -20,12 +21,12 @@ function withdrawal() {
 
 function deposit() {
     let amount = parseInt(prompt("Enter your deposit amount:"));
-    avlbal += amount;
+    avlbal =  avlbal + amount;
     console.log("Successfully deposited: " + amount);
     console.log("Your new balance is: " + avlbal);
 }
 
-// Higher-order function using callback
+
 function balance(callback) {
     callback();
 }
