@@ -126,15 +126,39 @@ var company = [
 // (2)  Find employees earning more than $80,000. (*)
 // Count the total number of employees in all companies.
 
-    var employeessalary = company.map((comp)=>comp.employees.filter((emp)=>emp.salary > 80000))
-    console.log(employeessalary)
+    // var employeessalary = company.map((comp)=>comp.employees.filter((emp)=>emp.salary > 80000))
+    // console.log(employeessalary)
 
 // (3) Count the total number of employee objects across all companies.
-// Find the position of an employee named "Emily Davis".
+
     
-    // var totalEmployees = company.reduce((count, comp) => count + comp.employees.length, 0);
+    // var totalEmployees = company.reduce((sum, comp) => sum + comp.employees.length,0);
     // console.log("Total number of employees:", totalEmployees);
 
-    // var findname = company.filter((comp)=>comp.employees).filter((na)=>na.name =="Emily Davis")
-    // console.log(findname)
+// (4) Find the position of an employee named "Emily Davis".
+    // var findposition = company.find((comp)=>comp.employees.find((emp)=>emp.name=="Emily Davis")).employees.find((emp)=> emp.name === "Emily Davis").position
+    // console.log(findposition)
 
+// (5)  Find which company "Liam Wilson" works for.
+  //  const findcompany = company.find((comp)=>comp.employees.find((emp)=>emp.name == "Liam Wilson")).companyname
+  //  console.log(findcompany)
+
+// (6) Calculate the average salary of employees in "Tech Solutions".
+
+    // const findaveragesalary = company.find((comp)=>comp.companyname=="Tech Solutions").employees.reduce((sum,emp)=>sum + emp.salary/2,0)
+    // console.log(findaveragesalary)
+
+// (7)  Search through all employees arrays for employees with an age greater than 30 and list their details.    
+
+    // const greateremployee=company.map((comp)=>comp.employees.filter((emp)=>emp.age > 30)) 
+    // console.log(greateremployee)
+
+// (8) Find the youngest employee in the dataset.
+
+    // const loweremployee=company.map((comp)=>comp.employees.filter((emp)=>emp.age < 30)) 
+    // console.log(loweremployee)
+
+// (9) Count how many employees have an email domain of "datadynamics.com".    
+
+      // const findemail = company.map((comp)=>comp.employees.reduce((sum , emp)=>sum + emp.email.endsWith("datadynamics.com"),0))
+      // console.log(findemail)
