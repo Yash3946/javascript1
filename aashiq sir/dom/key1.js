@@ -15,8 +15,8 @@ function printTxt(){
         nameErr.innerHTML = name.value;
         name.style.outline = "2px solid green";
     }
-
-
+    //git config --global user.email
+    //git config --global user.name
     
 }
 
