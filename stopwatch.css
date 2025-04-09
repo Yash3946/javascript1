@@ -1,0 +1,60 @@
+/* Full page background image */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('./1646431-1920x1280-desktop-hd-land-rover-defender-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+/* Stopwatch container styling */
+.stopwatch-container {
+    max-width: 400px;
+    margin: 100px auto;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent */
+    border-radius: 15px;
+    padding: 30px 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+/* Main title */
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
+}
+
+/* Time display */
+#hour, #min, #sec, div span {
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+/* Buttons */
+button {
+    padding: 12px 24px;
+    margin: 15px 10px 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(145deg, #0f2027, #203a43, #2c5364);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background: #00ffcc;
+    color: #000;
+    transform: scale(1.05);
+}
+
+br {
+    margin-bottom: 20px;
+}
